@@ -1,0 +1,40 @@
+input, select {
+  margin: 2px;
+  width: 200px;
+  height: 30px;
+}
+
+button {
+  width: 100px;
+  background-color: #D4D0C8;
+  color: white;
+  border: 1px solid #D4D0C8;
+}
+
+#delete {
+  float: right;
+  width: 90px;
+  height: 28px;
+  border: 1px solid white;
+  margin-top: -4px;
+}
+
+.delete {
+  width: 38px;
+  margin: 1px;
+  height: 20px;
+}
+
+.errorMessage {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}
+
+.item {
+  font-weight: 5px;
+}
+
+/* [id^= 'editModeValue'] {
+  display: none;
+} */

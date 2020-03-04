@@ -1,0 +1,25 @@
+<div class="container jumbotron">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" #input>
+      <button class="btn btn-primary" (click)="onAdd(input.value)">Add Item!</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li [@listRow]="state" class="list-group-item" *ngFor="let item of list; let i = index;">
+          <input *ngIf="editMode[i]" id= "{{ 'editModeValue' + i }}" [value]="item" type="text">
+          <span *ngIf="!editMode[i]" class="item">{{ item }}</span>
+          <button *ngIf="editMode[i]" id="delete" class="btn-primary" (click)="update(i)">Update</button>
+          <button *ngIf="!editMode[i]" id="delete" class="btn-primary" (click)="edit(i)">Edit</button>
+          <button id="delete" class="btn-primary" (click)="onDelete(i)">X</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="errorExists" class="errorMessage">
+    {{errorMessage}}
+  </div>
+</div>
